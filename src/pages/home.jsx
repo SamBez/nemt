@@ -16,33 +16,32 @@ function Home() {
       <p className="text-lg mb-8">Safe, comfortable, and timely transport for your medical appointments and needs.</p>
       <a href="#contact" className="bg-yellow-500 text-blue-800 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400">Schedule a Ride</a>
     </div>
-  <section id="services" className="py-16">
+    <section id="services" className="py-16">
   <div className="container mx-auto text-center">
     <h2 className="text-3xl font-bold mb-8">Our Services</h2>
 
-    <div className="relative overflow-hidden">
+    <div className="relative ">
       <div id="slider" className="flex transition-transform duration-500 ease-out">
         <div className="w-full md:w-1/3 p-4 flex-shrink-0">
-          <div className="bg-yellow-500 p-6 rounded-lg shadow-lg">
+          <div className="bg-yellow-400 p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-semibold mb-2">Appointment Transport</h3>
             <p>Reliable transportation to and from medical appointments with professional drivers.</p>
           </div>
         </div>
         <div className="w-full md:w-1/3 p-4 flex-shrink-0">
-          <div className="bg-yellow-500 p-6 rounded-lg shadow-lg">
+          <div className="bg-yellow-400 p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-semibold mb-2">Hospital Discharges</h3>
             <p>Safe transport from the hospital to your home or care facility.</p>
           </div>
         </div>
         <div className="w-full md:w-1/3 p-4 flex-shrink-0">
-          <div className="bg-yellow-500 p-6 rounded-lg shadow-lg">
+          <div className="bg-yellow-400 p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-semibold mb-2">Routine Check-ups</h3>
             <p>Convenient transport for regular check-ups and follow-up visits.</p>
           </div>
         </div>
       </div>
     </div>
-
 
   </div>
 </section>
@@ -66,7 +65,7 @@ function Home() {
   </section>
 
   <footer className="bg-gray-600 text-white py-4 text-center">
-    <p>&copy; 2024 MedTransport. All rights reserved.</p>
+    <p>&copy; 2024 Enkutatash. All rights reserved.</p>
   </footer>
     </div>
   )

@@ -8,7 +8,7 @@ import Navbar from './pages/Navbar';
 
 function App() {
   return (
-    <div className="h-screen bg-gray-100">
+    <body className="leading-normal tracking-normal border-lime-500 " style={{background: "linear-gradient(90deg, #d53369 0%, #daae51 100%)"}}>
       <Navbar/>
            <BrowserRouter>
 
@@ -18,17 +18,12 @@ function App() {
 
           <Route path='/aboutus' element={<About/>} />
           <Route path='/contactus' element={<Contactus/>} />
-          {/* <Route path='/feedbacks' element={<Feedbacks/>} /> */}
-      
-         {/* <Route path='/login' element={<Login/>} />
-         <Route path='/signup' element={<Signup/>} /> */}
-
         
        </Routes>
 
 
       </BrowserRouter>
-    </div>
+    </body>
   );
 }
 
