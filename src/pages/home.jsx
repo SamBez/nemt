@@ -12,7 +12,7 @@ function Home() {
     
     ></div>
     <div className="relative z-10 max-w-2xl">
-      <h1 className="text-4xl md:text-6xl font-bold mb-4">Reliable Non-Emergency Medical Transportation</h1>
+      <h1 className="text-4xl md:text-6xl font-bold mb-4">Reliable Medical Transportation</h1>
       <p className="text-lg mb-8">Safe, comfortable, and timely transport for your medical appointments and needs.</p>
       <a href="#contact" className="bg-yellow-500 text-blue-800 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400">Schedule a Ride</a>
     </div>
@@ -21,7 +21,7 @@ function Home() {
     <h2 className="text-3xl font-bold mb-8">Our Services</h2>
 
     <div className="relative ">
-      <div id="slider" className="flex transition-transform duration-500 ease-out">
+      <div id="slider" className="flex flex-wrap text-black transition-transform duration-500 ease-out">
         <div className="w-full md:w-1/3 p-4 flex-shrink-0">
           <div className="bg-yellow-400 p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-semibold mb-2">Appointment Transport</h3>
