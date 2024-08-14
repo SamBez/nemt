@@ -43,10 +43,7 @@ function Home() {
       </div>
     </div>
 
-    <div className="flex justify-center mt-4">
-      <button id="prev" className="bg-blue-600 text-white px-4 py-2 rounded-lg mx-2">Prev</button>
-      <button id="next" className="bg-blue-600 text-white px-4 py-2 rounded-lg mx-2">Next</button>
-    </div>
+
   </div>
 </section>
   </section>
