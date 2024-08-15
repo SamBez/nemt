@@ -3,12 +3,12 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/home';
 import About from './pages/About';
-import Contactus from './pages/Contactus';
 import Navbar from './pages/Navbar';
+import ContactForm from './pages/Contactus';
 
 function App() {
   return (
-    <body className="leading-normal tracking-normal border-lime-500 " style={{background: "linear-gradient(90deg, #d53369 0%, #daae51 100%)"}}>
+    <body className="leading-normal w-screen h-screen tracking-normal border-lime-500 " style={{background: "linear-gradient(90deg, #8a8a8a 20%, #c2b280 100%)"}}>
       <Navbar/>
            <BrowserRouter>
 
@@ -17,7 +17,7 @@ function App() {
           <Route path='/'  element={<Home/>} />
 
           <Route path='/aboutus' element={<About/>} />
-          <Route path='/contactus' element={<Contactus/>} />
+          <Route path='/contactus' element={<ContactForm/>} />
         
        </Routes>
 
