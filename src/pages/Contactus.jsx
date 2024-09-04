@@ -1,5 +1,6 @@
 
     import React, { useState } from 'react';
+import Footer from '../components/Footer';
 
     function ContactForm() {
       const [formData, setFormData] = useState({
@@ -22,65 +23,92 @@
       };
     
       return (
-        <div className="max-w-lg mx-auto p-6 bg-gray-400 shadow-lg rounded-lg mt-4">
+        <div className="max-w-lg mx-auto md:mt-10 p-6 bg-gray-400 shadow-lg rounded-lg mt-4">
           <h2 className="text-2xl font-bold mb-6 text-center">Contact Us</h2>
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-                Name
+                First name
               </label>
               <input
                 type="text"
                 id="name"
-                name="name"
+                name="firstname"
                 value={formData.name}
                 onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="Your name"
+                placeholder="First name"
+              />
+              </div>
+              <div className="mb-4">
+              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+                Last name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="lastname"
+                value={formData.name}
+                onChange={handleChange}
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                placeholder="Last name"
               />
               </div>
             <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-                Name
+                Phone
               </label>
                <input
-                type="text"
+                type="tel"
                 id="name"
-                name="name"
+                name="phone"
                 value={formData.name}
                 onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="Your name"
+                placeholder="Phone"
               />
               </div>
               <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-                Name
-              </label>
+                 <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+                   Email
+                 </label>
                <input
                 type="text"
-                id="name"
-                name="name"
+                id="email"
+                name="email"
                 value={formData.name}
                 onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="Your name"
+                placeholder="Email"
               />
             </div>
             <div className="mb-4">
               <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                Email
+                Date
               </label>
               <input
-                type="email"
-                id="email"
-                name="email"
+                type="date"
+                id="date"
+                name="date"
                 value={formData.email}
                 onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="Your email"
+                placeholder="Date"
               />
             </div>
+            <div className="mb-4">
+              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+                Select Services
+              </label>
+              <select name="" id="" >
+              <optgroup label="Select Services">
+                
+                  <option value="DIALYSIS_APPOINTMENT">Dialysis Appointments </option>
+                  <option value={"DOCTOR_VISITS"} >Doctor Visits</option>
+                   <option value="PHYSICAL_THERAPY">Physical Therapy and Rehabilitation</option>
+              </optgroup>
+              </select>
+              </div>
             <div className="mb-6">
               <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
                 Message

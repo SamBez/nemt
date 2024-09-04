@@ -5,6 +5,7 @@ import Home from './pages/home';
 import About from './pages/About';
 import Navbar from './pages/Navbar';
 import ContactForm from './pages/Contactus';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
 
 
       </BrowserRouter>
+      <Footer/>
+
     </body>
   );
 }
