@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
+import { redirect, useNavigate, useNavigation } from 'react-router-dom';
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
-
+  const navigate = useNavigate();
     const toggleMenu = () => {
       setIsOpen(!isOpen);
     };
+    const login = () => {
+      navigate("/login")
+    }
 
 
   return (
@@ -15,7 +19,9 @@ function Navbar() {
             <img src="imag.png" alt="enkuatash" srcset="" style={{maxHeight: '80px'}} />
           <a className="toggleColour text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
           
-            ENKUTATASH
+            <h1>
+               ENKUTATASH
+              </h1>
           </a>
         </div>
         <div className="block lg:hidden pr-4">
@@ -41,6 +47,7 @@ function Navbar() {
             </li>
           </ul>
           <button
+          onClick={login}
             id="navAction"
             className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           >
