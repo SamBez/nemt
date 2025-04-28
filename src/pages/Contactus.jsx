@@ -1,15 +1,24 @@
 
     import React, { useState } from 'react';
 import Footer from '../components/Footer';
+import Success from './Success';
 
     function ContactForm() {
       const [formData, setFormData] = useState({
-        name: '',
+        firstname: '',
+        lastname:'',
         email: '',
-        message: ''
+        message: '',
+        phone: '',
+        date: Date,
+        service: ''
       });
+
+      const [open, onCloseSuccess] = useState(false)
     
       const handleChange = (e) => {
+        console.log(e);
+        e.preventDefault();
         setFormData({
           ...formData,
           [e.target.name]: e.target.value
@@ -19,11 +28,13 @@ import Footer from '../components/Footer';
       const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission
+        onCloseSuccess(true);
         console.log(formData);
       };
     
       return (
-        <div className="max-w-lg mx-auto md:mt-10 p-6 bg-gray-400 shadow-lg rounded-lg mt-4">
+        <>
+        <div className="max-w-lg  justify-center flex-col mx-auto mt-10 md:mt-10 p-6 bg-grey-300 shadow-lg rounded-lg ">
           <h2 className="text-2xl font-bold mb-6 text-center">Contact Us</h2>
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
@@ -32,9 +43,10 @@ import Footer from '../components/Footer';
               </label>
               <input
                 type="text"
-                id="name"
+                id="firstname"
+                required
                 name="firstname"
-                value={formData.name}
+                value={formData.firstname}
                 onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 placeholder="First name"
@@ -46,9 +58,10 @@ import Footer from '../components/Footer';
               </label>
               <input
                 type="text"
-                id="name"
+                required
+                id="lastname"
                 name="lastname"
-                value={formData.name}
+                value={formData.lastname}
                 onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 placeholder="Last name"
@@ -60,9 +73,10 @@ import Footer from '../components/Footer';
               </label>
                <input
                 type="tel"
-                id="name"
+                id="phone"
+                required
                 name="phone"
-                value={formData.name}
+                value={formData.phone}
                 onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 placeholder="Phone"
@@ -75,8 +89,9 @@ import Footer from '../components/Footer';
                <input
                 type="text"
                 id="email"
+                required
                 name="email"
-                value={formData.name}
+                value={formData.email}
                 onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 placeholder="Email"
@@ -88,9 +103,10 @@ import Footer from '../components/Footer';
               </label>
               <input
                 type="date"
+                required
                 id="date"
                 name="date"
-                value={formData.email}
+                value={formData.date}
                 onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 placeholder="Date"
@@ -100,18 +116,18 @@ import Footer from '../components/Footer';
               <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
                 Select Services
               </label>
-              <select name="" id="" >
+              <select required name="service" defaultValue={"DOCTOR_VISITS"} id="" onChange={handleChange}>
               <optgroup label="Select Services">
-                
                   <option value="DIALYSIS_APPOINTMENT">Dialysis Appointments </option>
                   <option value={"DOCTOR_VISITS"} >Doctor Visits</option>
+                  <option value={"SURGERY"} >Surgery</option>
                    <option value="PHYSICAL_THERAPY">Physical Therapy and Rehabilitation</option>
               </optgroup>
               </select>
               </div>
             <div className="mb-6">
               <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
-                Message
+                Message (Optional)
               </label>
               <textarea
                 id="message"
@@ -123,6 +139,7 @@ import Footer from '../components/Footer';
                 rows="5"
               />
             </div>
+            <Success open={open} message={"You have successfuly submitted your request. We will get back to you shortly!"} onClose={() => onCloseSuccess(!open)}/>
             <div className="flex items-center justify-center">
               <button
                 type="submit"
@@ -133,6 +150,7 @@ import Footer from '../components/Footer';
             </div>
           </form>
         </div>
+        </>
       );
     }
     

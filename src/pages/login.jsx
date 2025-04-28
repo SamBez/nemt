@@ -1,13 +1,22 @@
 import React, { useState } from 'react';
+import { useAuth } from '../auth';
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const auth = useAuth();
+  const [input, setInput] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Email:', email, 'Password:', password);
+    console.log('Email:', input?.email, 'Password:', input?.password);
+    if(input?.email || input?.password){
+        auth.loginAction(input);
+    } else {
+      alert("Please enter credentials!!");
+
+    }
+
     // Add your authentication logic here
+
   };
 
   return (
@@ -24,8 +33,8 @@ const Login = () => {
               type="email"
               id="email"
               placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={input?.email}
+              onChange={(e) => setInput({email: e.target.value})}
               required
             />
           </div>
@@ -38,8 +47,8 @@ const Login = () => {
               type="password"
               id="password"
               placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              value={input?.password}
+              onChange={(e) => setInput({password: e.target.value})}
               required
             />
           </div>

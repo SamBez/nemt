@@ -3,7 +3,7 @@ import Footer from '../components/Footer'
 
 function Home() {
   return (
-    <div className="h-screen bg-gray-100">
+    <div className="h-screen  bg-gray-100">
      <section className="relative bg-grey-300 text-white h-screen flex flex-col justify-center items-center text-center px-4">
     <div className="absolute inset-0 bg-cover bg-center" 
     style={{

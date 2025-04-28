@@ -8,6 +8,7 @@ import ContactForm from './pages/Contactus';
 import Footer from './components/Footer';
 import Login from './pages/login';
 import Dashboard from './pages/Dashboard';
+import AuthProvider from './auth';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
     <body className="leading-normal w-screen h-screen tracking-normal border-lime-500 " style={{background: "linear-gradient(90deg, #8a8a8a 20%, #c2b280 100%)"}}>
     <BrowserRouter>
       <Navbar/>
+      <AuthProvider>
       <Routes>
 
           <Route path='/home'  element={<Home/>} />
@@ -25,6 +27,7 @@ function App() {
           <Route path='/dashboard' element={<Dashboard/>} />
         
        </Routes>
+      </AuthProvider>
       </BrowserRouter>
       <Footer/>
 

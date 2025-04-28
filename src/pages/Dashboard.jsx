@@ -4,10 +4,10 @@ import moment from 'moment'; // Optional for date handling
 const  Dashboard = () => {
 
   const [appointments, setAppointments] = useState([
-    { id: 1, title: 'Doctor Appointment', date: '2024-09-20' },
-    { id: 2, title: 'Team Meeting', date: '2024-08-10' },
-    { id: 3, title: 'Client Presentation', date: '2024-09-15' },
-    { id: 4, title: 'Dentist Appointment', date: '2024-09-01' },
+    { id: 1, title: 'Doctor Appointment', date: '2024-09-20', name: "Test Name", address: "Lincoln Ave" },
+    { id: 2, title: 'Team Meeting', date: '2024-08-10', name: "Test Name", address: "Lincoln Ave" },
+    { id: 3, title: 'Client Presentation', date: '2024-09-15', name: "Test Name", address: "Lincoln Ave" },
+    { id: 4, title: 'Dentist Appointment', date: '2024-09-01', name: "Test Name", address: "Lincoln Ave" },
   ]);
 
   const [scheduledAppointments, setScheduledAppointments] = useState([]);
@@ -45,6 +45,9 @@ const  Dashboard = () => {
                 >
                   <p className="font-bold">{appointment.title}</p>
                   <p>{moment(appointment.date).format('MMMM Do YYYY')}</p>
+                  <p className="font-bold">{appointment.name}</p>
+                  <p className="font-bold">{appointment.address}</p>
+
                 </div>
               ))
             ) : (

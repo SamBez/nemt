@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
   return (
-    <div className='h-screen pt-12 border-red-400 border-solid ' >
+    <div className='h-screen flex items-center justify-center pt-12 border-red-400 border-solid ' >
       <section className="bg-transparent flex py-12 px-6 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto text-center">
         <h1 className="text-4xl font-bold text-gray-800 mb-6">About Us</h1>
